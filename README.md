@@ -35,12 +35,13 @@ Sculpt not yet finished. Electronics more or less final, will wait for first cas
 ![Latest Sculpt State](Latest_Sculpt.jpg)
 
 ## Current Hardware state
-Waiting for first casting & initial assembly to iterate further
+Mk4, Waiting for first casting & initial assembly to iterate further
 
-![Latest Sculpt State](PCB/Latest_Assembly.jpg)
+![Latest Assembly](PCB/Latest_Assembly.jpg)
 
-## Current board layout
-Waiting for first casting & initial assembly to iterate further
+![Latest Board](PCB/Latest_Board.jpg)
+
+## Current PCB layout
+Mk5, Waiting for first casting & initial assembly to iterate further
 
 ![PCB](PCB/Latest_PCB.png)
-
