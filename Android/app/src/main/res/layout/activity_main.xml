@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/refreshDeviceButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/diablo_ii_resurrected" />
+
+    <TextView
+        android:id="@+id/sample_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Status"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/button_soulstone"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="48dp"
+        android:backgroundTint="#712000"
+        android:text="Soulstone"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button_eyes"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarSoulstone"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_off"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:backgroundTint="#712000"
+        android:text="Turn OFF"
+        app:layout_constraintBottom_toTopOf="@+id/button_soulstone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_eyes"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="48dp"
+        android:backgroundTint="#712000"
+        android:text="Eyes"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button_mouth"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarEyes"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_mouth"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="48dp"
+        android:backgroundTint="#712000"
+        android:text="Mouth"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarVariation"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarMouth"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/device_list"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="4dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#510D04"
+        android:cacheColorHint="@color/white"
+        android:foregroundTint="@color/white"
+        android:foregroundTintMode="add"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/button_off"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></ListView>
+
+    <Button
+        android:id="@+id/refreshDeviceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginEnd="48dp"
+        android:backgroundTint="#712000"
+        android:text="Refresh"
+        app:layout_constraintBottom_toTopOf="@+id/device_list"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarSoulstone"
+        android:layout_width="190dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="48dp"
+        android:max="255"
+        android:progressBackgroundTint="#FF3300"
+        android:progressTint="#FF8D00"
+        android:thumbTint="#FF8D00"
+        app:layout_constraintBottom_toTopOf="@+id/button_eyes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_off" />
+
+    <SeekBar
+        android:id="@+id/seekBarEyes"
+        android:layout_width="190dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="48dp"
+        android:max="255"
+        android:progressBackgroundTint="#FF3300"
+        android:progressTint="#FF8D00"
+        android:thumbTint="#FF8D00"
+        app:layout_constraintBottom_toTopOf="@+id/button_mouth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_soulstone" />
+
+    <SeekBar
+        android:id="@+id/seekBarMouth"
+        android:layout_width="190dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="48dp"
+        android:max="255"
+        android:progressBackgroundTint="#FF3300"
+        android:progressTint="#FF8D00"
+        android:thumbTint="#FF8D00"
+        app:layout_constraintBottom_toBottomOf="@+id/button_mouth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_eyes" />
+
+    <SeekBar
+        android:id="@+id/seekBarVariation"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:max="255"
+        android:progressBackgroundTint="#FF3300"
+        android:progressTint="#FF8D00"
+        android:thumbTint="#FF8D00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarBaselineSync"/>
+
+    <SeekBar
+        android:id="@+id/seekBarBaselineSync"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:max="255"
+        android:progressBackgroundTint="#FF3300"
+        android:progressTint="#FF8D00"
+        android:thumbTint="#FF8D00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/sample_text"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="Available devices:"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/refreshDeviceButton"
+        app:layout_constraintEnd_toStartOf="@+id/refreshDeviceButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/refreshDeviceButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
