@@ -22,21 +22,21 @@
 
 //----------------------------------------------------------------------------
 
-#if (HW_MK == 2)
-# define PIN_LED_EYES_L       5
-# define PIN_LED_EYES_R       6
-# define PIN_LED_SOULSTONE_0  9
-# define PIN_LED_SOULSTONE_1  10
-# define PIN_LED_MOUTH_0      3
-# define PIN_LED_MOUTH_1      11
-# define PIN_WIFI_SERIAL_RX   2
-# define PIN_WIFI_SERIAL_TX   8
-#elif (HW_MK >= 4)
+#if (HW_MK >= 4)
 # define PIN_LED_EYES_L       5
 # define PIN_LED_EYES_R       3
 # define PIN_LED_SOULSTONE_0  9
 # define PIN_LED_SOULSTONE_1  6
 # define PIN_LED_MOUTH_0      10
+# define PIN_LED_MOUTH_1      11
+# define PIN_WIFI_SERIAL_RX   2
+# define PIN_WIFI_SERIAL_TX   8
+#else
+# define PIN_LED_EYES_L       5
+# define PIN_LED_EYES_R       6
+# define PIN_LED_SOULSTONE_0  9
+# define PIN_LED_SOULSTONE_1  10
+# define PIN_LED_MOUTH_0      3
 # define PIN_LED_MOUTH_1      11  // Unused, single mouth output before Mk4
 # define PIN_WIFI_SERIAL_RX   2
 # define PIN_WIFI_SERIAL_TX   8
@@ -115,7 +115,7 @@ void setup()
   // Init serial com for HC-06 module
   Serial.begin(9600);
   // Init serial com for ESP-01 module
-  SerialWifi.begin(57600);  // don't use 9600, arduino docs says lower baud rates can interfere badly with HW serial (?)
+  SerialWifi.begin(115200); // don't use 9600, arduino docs says lower baud rates can interfere badly with HW serial (?)
 
   // EEPROM: Detect if the data contents of the EEPROM are valid.
   // Don't bother computing an actual CRC. We simply want to see if the data is properly initialized.

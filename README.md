@@ -21,6 +21,11 @@ Main sculpting references:
 # Current states
 Sculpt not yet finished. Electronics more or less final, will wait for first casting & initial assembly before ordering & assembling the Mk5 board, and doing another potential iteration @ Mk6 if further adjustments need to be made.
 
+Update on controller circuit: With mk6, will try to use an ESP-12E instead of an arduino + bluetooth module + ESP-1
+The ESP-12E has enough pins to drive the 5 LED rails, and would allow to remove the need for any inter-module communication.
+The wifi module can behave as an access point initially to allow configuring wifi access, then connect to the local wifi.
+No need for bluetooth, what we really want is wifi control. Plus the serial communication between the arduino & BT module is pretty shite.
+
 ## Current sculpt state
 - [x] Final eyes placeholders, threaded, will receive centering rods for casting
 - [x] Final face proportions
@@ -42,6 +47,6 @@ Mk4, Waiting for first casting & initial assembly to iterate further
 ![Latest Board](PCB/Latest_Board.jpg)
 
 ## Current PCB layout
-Mk5, Waiting for first casting & initial assembly to iterate further
+Mk6, Waiting for first casting & initial assembly to iterate further
 
 ![PCB](PCB/Latest_PCB.png)
