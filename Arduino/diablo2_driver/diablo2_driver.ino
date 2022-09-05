@@ -22,7 +22,21 @@
 
 //----------------------------------------------------------------------------
 
-#if (HW_MK >= 4)
+#if (HW_MK >= 7)
+# define PIN_LED_EYES_L       16
+# define PIN_LED_EYES_R       14
+# define PIN_LED_SOULSTONE_0  5
+# define PIN_LED_SOULSTONE_1  4
+# define PIN_LED_MOUTH_0      12
+# define PIN_LED_MOUTH_1      13
+#elif (HW_MK >= 6)
+# define PIN_LED_EYES_L       12
+# define PIN_LED_EYES_R       13
+# define PIN_LED_SOULSTONE_0  16
+# define PIN_LED_SOULSTONE_1  14
+# define PIN_LED_MOUTH_0      5
+# define PIN_LED_MOUTH_1      4
+#elif (HW_MK >= 4)
 # define PIN_LED_EYES_L       5
 # define PIN_LED_EYES_R       3
 # define PIN_LED_SOULSTONE_0  9
